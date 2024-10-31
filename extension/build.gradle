@@ -4,12 +4,14 @@ plugins {
 }
 
 ext {
+versions = [
             opentelemetrySdk           : "1.42.1",
             opentelemetryJavaagent     : "2.8.0",
             opentelemetryJavaagentAlpha: "2.8.0-alpha",
             opentelemetryContribAlpha  : "1.38.0-alpha",
 
             junit                      : "5.9.2"
+            ]
 }
 
 repositories {
