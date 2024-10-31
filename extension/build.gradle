@@ -10,7 +10,6 @@ ext {
             opentelemetryContribAlpha  : "1.38.0-alpha",
 
             junit                      : "5.9.2"
-    ]
 }
 
 repositories {
