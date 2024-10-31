@@ -27,4 +27,5 @@ public class DropSpansExtension implements AutoConfigurationCustomizerProvider {
       autoConfiguration.addTracerProviderCustomizer((sdkTracerProviderBuilder, configProperties) ->
           sdkTracerProviderBuilder.setSampler(Sampler.parentBased(dropSpanBuilder.build())));
     }
+  }
 }
