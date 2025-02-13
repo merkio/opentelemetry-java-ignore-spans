@@ -27,9 +27,9 @@ spec:
 ```
 
 ## Current versions
-* Extension version => [2.8.0](https://github.com/vmaleze/opentelemetry-java-ignore-spans/releases)
-* [OpenTelemetry java agent](https://github.com/open-telemetry/opentelemetry-java-instrumentation) => 2.8.0
-* [OpenTelemetry SDK](https://github.com/open-telemetry/opentelemetry-java) => 1.42.1
+* Extension version => [2.12.0](https://github.com/vmaleze/opentelemetry-java-ignore-spans/releases)
+* [OpenTelemetry java agent](https://github.com/open-telemetry/opentelemetry-java-instrumentation) => 2.12.0
+* [OpenTelemetry SDK](https://github.com/open-telemetry/opentelemetry-java) => 1.47.0
 
 ## References :
 * [Embedded extension](https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/examples/extension/README.md#embed-extensions-in-the-opentelemetry-agent)
