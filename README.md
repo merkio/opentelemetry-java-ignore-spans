@@ -8,7 +8,7 @@ Add the `OTEL_DROP_SPANS_{SPAN_KIND}_{ATTRIBUTE_NAME}` env variable and set the 
 
 ## Usage
 
-Add the `OTEL_DROP_SPANS` env variable and set the spans to drop using the `,` as a separator
+Add the `OTEL_DROP_SPANS_SERVER_URL.PATH` env variable and set the spans to drop using the `,` as a separator
 
 ### [Java instrumentation](https://opentelemetry.io/docs/instrumentation/java/automatic/)
 Simply download the [latest](https://github.com/vmaleze/opentelemetry-java-ignore-spans/releases) version instead of the javaagent, and you are good to go.
