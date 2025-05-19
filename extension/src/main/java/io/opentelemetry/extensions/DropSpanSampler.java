@@ -11,7 +11,12 @@ import io.opentelemetry.sdk.trace.samplers.SamplingDecision;
 import io.opentelemetry.sdk.trace.samplers.SamplingResult;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
@@ -42,7 +47,6 @@ public class DropSpanSampler implements Sampler {
                         .add(Pattern.compile(span));
             }
         }
-        log.info("Created rules: {}", rules);
 
     }
 
@@ -82,7 +86,6 @@ public class DropSpanSampler implements Sampler {
     }
 
     private boolean shouldBeDropped(Map<AttributeKey<String>, Set<Pattern>> rules, Attributes attributes) {
-        log.info("Check sample: {}", attributes.asMap());
         for (var rule : rules.entrySet()) {
             if (attributes.asMap().containsKey(rule.getKey())) {
                 for (var p : rule.getValue()) {

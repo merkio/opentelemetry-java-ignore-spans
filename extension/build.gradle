@@ -5,10 +5,11 @@ plugins {
 
 ext {
     versions = [
-            opentelemetrySdk           : "1.47.0",
-            opentelemetryJavaagent     : "2.12.0",
-            opentelemetryJavaagentAlpha: "2.12.0-alpha",
-            opentelemetryContribAlpha  : "1.43.0-alpha",
+            opentelemetrySdk           : "1.49.0",
+            opentelemetryJavaagent     : "2.15.0",
+            opentelemetryJavaagentAlpha: "2.15.0-alpha",
+            opentelemetryContribAlpha  : "1.46.0-alpha",
+
             lombok                     : "1.18.34",
 
             junit                      : "5.9.2"
@@ -38,16 +39,16 @@ dependencies {
 
     compileOnly("io.opentelemetry:opentelemetry-sdk-extension-autoconfigure")
 
-    testImplementation("org.testcontainers:testcontainers:1.18.0")
+    testImplementation("org.testcontainers:testcontainers:1.21.0")
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.14.2")
-    testImplementation("com.google.protobuf:protobuf-java-util:3.22.2")
-    testImplementation("com.squareup.okhttp3:okhttp:4.10.0")
+    testImplementation("com.google.protobuf:protobuf-java-util:3.25.4")
+    testImplementation("com.squareup.okhttp3:okhttp:4.12.0")
     testImplementation("io.opentelemetry:opentelemetry-api")
-    testImplementation("io.opentelemetry.proto:opentelemetry-proto:1.1.0-alpha")
+    testImplementation("io.opentelemetry.proto:opentelemetry-proto:1.5.0-alpha")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junit}")
 
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${versions.junit}")
-    testRuntimeOnly("ch.qos.logback:logback-classic:1.4.14")
+    testRuntimeOnly("ch.qos.logback:logback-classic:1.5.18")
 
     //Otel Java instrumentation that we use and extend
     otel("io.opentelemetry.javaagent:opentelemetry-javaagent:${versions.opentelemetryJavaagent}")

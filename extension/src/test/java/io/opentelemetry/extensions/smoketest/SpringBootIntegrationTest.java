@@ -24,6 +24,7 @@ class SpringBootIntegrationTest extends IntegrationTest {
         runGetRequest("/ping");
         runGetRequest("/actuator/health");
         runGetRequest("/actuator/metrics");
+        runGetRequest("/health/readiness");
         runGetRequest("/client");
         runGetRequest("/actuator/info");
 
@@ -33,6 +34,7 @@ class SpringBootIntegrationTest extends IntegrationTest {
         Assertions.assertEquals(1, countSpansByName(traces, "GET /ping"));
         Assertions.assertEquals(0, countSpansByName(traces, "GET /actuator/health"));
         Assertions.assertEquals(0, countSpansByName(traces, "GET /actuator/metrics"));
+        Assertions.assertEquals(0, countSpansByName(traces, "GET /health/readiness"));
         Assertions.assertEquals(2, countSpansByName(traces, "GET /actuator/info"));
 
         stopTarget();
